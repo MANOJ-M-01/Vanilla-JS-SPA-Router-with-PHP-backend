@@ -3,19 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="favicon.svg" type="image/svg">
-    <title>Vanilla React-Router</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Vanilla SPA Router</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <nav>
-      <a href="/" data-link>Home</a>
-      <a href="/about" data-link>About</a>
-      <a href="/contact" data-link>Contact</a>
-    </nav>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="/" data-link>Home</a></li>
+          <li><a href="/about" data-link>About</a></li>
+          <li><a href="/contact" data-link>Contact</a></li>
+          <li><a href="/todos" data-link>Todos</a></li>
+        </ul>
+      </nav>
+    </header>
 
-    <div id="app"></div>
+    <main id="app"></main>
 
-    <script src="app.js" type="module"></script>
+    <script type="module" src="app.js"></script>
   </body>
 </html>
