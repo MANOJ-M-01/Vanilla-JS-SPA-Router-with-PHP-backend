@@ -1,4 +1,4 @@
-/* Reset some basic styles */
+/* Reset basic styles */
 * {
   margin: 0;
   padding: 0;
@@ -6,75 +6,79 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Arial", sans-serif;
   background-color: #f4f7f6;
   color: #333;
   line-height: 1.6;
-  padding: 20px;
 }
 
+h1,
+p {
+  margin-bottom: 15px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+/* Header styles */
 header {
   background-color: #333;
   color: #fff;
-  padding: 15px 0;
+  padding: 1rem 0;
 }
 
 nav ul {
   list-style-type: none;
   display: flex;
   justify-content: center;
+  padding: 0;
 }
 
 nav li {
-  margin: 0 15px;
+  margin: 0 1rem;
 }
 
 nav a {
   color: #fff;
-  text-decoration: none;
-  font-size: 18px;
-  font-weight: bold;
-  padding: 5px 15px;
+  font-size: 1.125rem;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
   transition: background-color 0.3s ease;
 }
 
 nav a:hover {
   background-color: #444;
-  border-radius: 5px;
 }
 
-/* Styling for the app container */
+/* Main content container */
 main {
   max-width: 800px;
-  margin: 20px auto;
+  margin: 2rem auto;
   background-color: #fff;
-  padding: 20px;
+  padding: 2rem;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-h1 {
-  color: #333;
-  font-size: 2rem;
-  margin-bottom: 15px;
-}
-
-p {
-  font-size: 1rem;
-  color: #666;
-}
-
-/* Todos specific styles */
+/* Todo List Styles */
 #todo-list {
   list-style-type: none;
   padding-left: 0;
+  margin-bottom: 2rem;
 }
 
 #todo-list li {
   font-size: 1rem;
   color: #555;
-  padding: 8px 0;
+  padding: 1rem 0;
   border-bottom: 1px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 #todo-list li strong {
@@ -82,35 +86,77 @@ p {
 }
 
 #todo-list li .completed {
-  color: green;
+  color: #4caf50; /* Green for completed tasks */
 }
 
 #todo-list li .not-completed {
-  color: red;
+  color: #f44336; /* Red for incomplete tasks */
 }
 
 #loading {
   font-size: 1.2rem;
   color: #888;
+  text-align: center;
 }
 
-/* Button styles */
+/* Button Styles */
 button {
-  padding: 10px 15px;
-  font-size: 16px;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
   cursor: pointer;
   border: none;
   background-color: #333;
   color: #fff;
   border-radius: 5px;
   transition: background-color 0.3s ease;
+  display: inline-block;
 }
 
 button:hover {
   background-color: #444;
 }
 
-/* Responsive styling */
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Pagination Container */
+#pagination {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+#pagination button {
+  margin: 0 1rem;
+}
+
+/* Placeholder Styling */
+.placeholder {
+  color: #ccc;
+  list-style-type: none;
+  padding: 1rem;
+  text-align: center;
+}
+
+/* Layout Styles */
+#app {
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
+}
+
+#todo-list {
+  flex-grow: 1; /* Ensure the todo list takes as much space as needed */
+  overflow-y: auto; /* Allow scrolling if content exceeds available space */
+}
+
+#pagination {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* Responsive Design */
 @media screen and (max-width: 600px) {
   nav ul {
     flex-direction: column;
@@ -126,10 +172,15 @@ button:hover {
   }
 
   p {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
 
   #todo-list li {
     font-size: 0.9rem;
+  }
+
+  button {
+    font-size: 0.9rem;
+    padding: 0.6rem 1rem;
   }
 }
