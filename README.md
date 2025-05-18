@@ -106,4 +106,3 @@ This ensures that when the user clicks back or forward:
 | User clicks **Back**    | ✅          | Triggers `popstate` — lets SPA react    |
 | User clicks **Forward** | ✅          | Triggers `popstate` — lets SPA react    |
 
-Let me know if you want a full breakdown of `history.pushState`, `replaceState`, or other router features like lazy loading or hash routing.
